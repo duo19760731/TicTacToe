@@ -1,6 +1,6 @@
 {
-  "name": "PrototypeExpress03",
-  "version": "0.0.0",
+  "name": "tictactoe-sato",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
