@@ -1,0 +1,127 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="../../favicon.ico">
+      <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+      <link href="/stylesheets/bootstrap-theme.min.css" rel="stylesheet">
+      <link href="/stylesheets/prototypeS8board.css" rel="stylesheet">
+      <script src="/javascript/socket.io.js"></script>
+      <title><%= title %></title>
+    </head>
+
+    <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top alert-success">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="/">Top Page</a>
+        </div>
+       </div>
+    </nav>
+
+      <div class="container theme-showcase" role="main">
+
+<!-- ★Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron alert-warning">
+<h1><%= title %></h1>
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>-- --</th>
+                <th>-- --</th>
+                <th>-- --</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="2">1</td>
+                <td>Trun:<input id="turn" type="text" value="0" disabled /></td>
+                <td>SocketID:<input id="selfId" type="text" value="0" disabled /></td>
+                <td>Socket Count:<input id="socketCount" type="text" value="0" disabled /></td>
+              </tr>
+              <tr>
+                <td>Action:<input id="action" type="text" value="attack" disabled /></td>
+                <td>endFlag:<input id="endFlag" type="text" value="" disabled /></td>
+                <td>Mark:<div id="mark" class="mark"></div></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>charaA:<input id="userNameA" type="text" value="?" disabled><div id="userA" class="charaA"></div></td>
+                <td>charaB:<input id="userNameB" type="text" value="?" disabled><div id="userB" class="charaB"></div></td>
+                <td>resident:<br/>
+                    <input id="resident1" value="" disabled/><br />
+                    <input id="resident2" value="" disabled/>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td colspan="2">Message :<input id="vod" type="text" value="" disabled /></td>
+                <td>L:</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+
+</div>
+
+
+<!-- ★闘技場スペース -->
+<div class="text-center">
+<div id="board"></div>
+</div>
+
+
+
+
+
+<!-- ★チャット表示スペース -->
+    <div class="container">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h4><span class="label label-info"><span class="glyphicon glyphicon-user"> USER NAME </span>：<%= username %></span></h4>
+        </div>
+        <div class="panel-body">
+          <div class="col-lg-6">
+            <div class="input-group"><span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                <input type="text" id="message" name="message" class="form-control" placeholder="Message" autofocus>
+              <span class="input-group-btn">
+                <button id="send" class="btn btn-primary">SEND</button>
+              </span>
+            </div>
+          </div>
+        </div>
+         <div class="panel-body">
+           <ul id="chat-area"></ul>
+         </div>
+      <div class="panel-footer"></div>
+      </div>
+    </div>
+
+
+
+     </div> <!-- /container -->
+
+
+    <input id="username" type="hidden" value="<%= username %>" />
+    <input id="selfId" type="hidden" value="" />
+    <!-- 描画完了後実行 --->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/javascript/jquery-1.11.3.js"></script>
+    <script src="/javascript/bootstrap.js"></script>
+    <script src="/javascript/prototypeS8Client.js"></script>
+
+    </body>
+  </html>

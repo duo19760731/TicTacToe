@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title><%= title %></title>
+    <!-- Bootstrap core CSS -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/bootstrap-theme.min.css" rel="stylesheet">
+
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top alert-success">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <a class="navbar-brand" href="/">Top Page</a>
+        </div>
+       </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron alert-warning">
+        <h1><%= title %></h1>
+      </div>
+
+      <div class="container">
+          <form action="/prototypeS8" method="post">
+              <div class="input-group">
+                <span class="input-group-addon">User Name</span>
+                <input type="text" name="username" class="form-control" placeholder="USER NAME" required autofocus maxlength="10">
+                <span class="input-group-btn">
+                  <button class="btn btn-success" type="submit">
+                    <span class="glyphicon glyphicon-log-in"> LOGIN</span>
+                  </button>
+                </span>
+              </div>
+          </form>
+      </div>
+
+    </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="/javascript/jquery-1.11.3.js"></script>
+  <script src="/javascript/bootstrap.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+    #scoreArea {
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+        margin: 30px auto;
+    }
+    #scoreText {
+        font-weight: bold;
+        font-size: 24px;
+    }
+    #startButton {
+        margin: 30px auto;
+        width: 180px;
+        border-radius: 5px;
+        box-shadow: 0 4px 0 #e91b0c;
+        background: #f44336;
+        color: #fff;
+        cursor: pointer;
+        padding: 7px;
+    }
+    #startButton:hover {
+        opacity: 0.8;
+    }
+    #startButton.pushed {
+        margin-top: 32px;
+        box-shadow: 0 2px 0 #e91b0c;
+    }
+
+    #giveUpButton {
+        margin: 30px auto;
+        width: 180px;
+        border-radius: 5px;
+        box-shadow: 0 4px 0 #e91b0c;
+        background: #f44336;
+        color: #fff;
+        cursor: pointer;
+        padding: 7px;
+    }
+    #giveUpButton:hover {
+        opacity: 0.8;
+    }
+    #giveUpButton.pushed {
+        margin-top: 32px;
+        box-shadow: 0 2px 0 #e91b0c;
+    }
+
+    .btn {
+        display: inline-block;
+        width: 50px;
+        hight: 40px
+        padding: 7px;
+        box-shadow: 1px 1px 1px 1px #000;
+        color: #fff;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    .btn + .btn {
+        margin-left: 10px;
+    }
+    .btn.inactive {
+        opacity: 0.5;
+    }
+
+    .btn.maru {
+        background-image: url("/images/maru.png");
+    }
+
+    .btn.batu {
+        background-image: url("/images/batu.png");
+    }
